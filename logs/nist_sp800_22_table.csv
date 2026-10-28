@@ -1,0 +1,9 @@
+Test Name,Statistic,p-value,Status (alpha=0.01)
+1. Monobit Frequency,0.3750,0.7077,PASS
+2. Block Frequency,580.6250,0.0189,PASS
+3. Runs Test,32492.0000,0.0311,PASS
+4. Longest Run of Ones,3.3331,0.6488,PASS
+5. Spectral DFT,-0.5592,0.5760,PASS
+6. Cumulative Sums,211.0000,0.7929,PASS
+7. Approximate Entropy,9.3591,0.0527,PASS
+8. Autocorrelation,-2.1602,0.0308,PASS

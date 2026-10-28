@@ -1,0 +1,51 @@
+% ======================================================================
+% LaTeX Tables for WoS Q1/Q2 Journal Manuscript
+% 6G 140 GHz UM-MIMO Digital Twin with Dynamic Frozen-Bit Crypto-Polar
+% ======================================================================
+
+\begin{table}[t]
+\centering
+\caption{NIST SP 800-22 Statistical Randomness and Cryptographic Security Evaluation ($N=256, K=128$)}
+\label{tab:nist_crypto}
+\begin{tabular}{lccc}
+\hline
+\textbf{Statistical / Cryptographic Test} & \textbf{Test Statistic / Value} & \textbf{$p$-value / Ideal} & \textbf{Result} \\
+\hline
+1. Monobit Frequency & 0.3750 & 0.7077 & PASS \\
+2. Block Frequency & 580.6250 & 0.0189 & PASS \\
+3. Runs Test & 32492.0000 & 0.0311 & PASS \\
+4. Longest Run of Ones & 3.3331 & 0.6488 & PASS \\
+5. Spectral DFT & -0.5592 & 0.5760 & PASS \\
+6. Cumulative Sums & 211.0000 & 0.7929 & PASS \\
+7. Approximate Entropy & 9.3591 & 0.0527 & PASS \\
+8. Autocorrelation & -2.1602 & 0.0308 & PASS \\
+\hline
+Codeword Avalanche Effect (SAC) & 50.07\% $\pm$ 3.01\% & 50.00\% & Ideal \\
+Decoder Output Avalanche (1-bit Key Flip) & 50.23\% $\pm$ 4.57\% & 50.00\% & Ideal \\
+Bit Independence Criterion (BIC $|\rho|$) & 0.0250 & 0.0000 & Uncorrelated \\
+Inter-Codeword Cross-Correlation & -0.0014 $\pm$ 0.0603 & 0.0000 & Orthogonal \\
+Shannon Entropy (1-bit / 8-bit) & 1.00000 / 7.9791 & 1.0000 / 8.0000 & Maximum \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table*}[t]
+\centering
+\caption{BER, BLER, and Decoding Latency Comparison Over 140 GHz UM-MIMO Digital Twin Channel ($N=256, K=128$, QPSK)}
+\label{tab:ber_latency}
+\begin{tabular}{lccccc}
+\hline
+\textbf{Receiver & Decoding Scheme} & \textbf{BER @ 0.5 dB} & \textbf{BER @ 1.5 dB} & \textbf{BER @ 2.5 dB} & \textbf{BLER @ 2.5 dB} & \textbf{Latency (ms)} \\
+\hline
+Bob - Standard Polar (SC) & 3.9755e-01 & 2.8229e-01 & 1.5653e-01 & 4.3750e-01 & 0.809 \\
+Bob - Crypto-Polar (SC) & 3.9197e-01 & 2.7648e-01 & 1.4624e-01 & 4.3250e-01 & 0.809 \\
+Bob - Crypto-Polar (BP, 20 iter) & 3.9396e-01 & 2.8121e-01 & 1.2834e-01 & 4.0083e-01 & 2.008 \\
+Bob - Crypto-Polar (SCL, L=4) & 3.3030e-01 & 1.9209e-01 & 5.6980e-02 & 2.1333e-01 & 0.778 \\
+Bob - Crypto-Polar (CA-SCL, L=8) & 3.0423e-01 & 1.5447e-01 & 4.0420e-02 & 1.2250e-01 & 1.026 \\
+Bob - Proposed Improved-CA-SCL (L=8) & 2.3642e-01 & 8.9886e-02 & 1.3177e-02 & 4.2500e-02 & 1.016 \\
+Eve - Threat I: Naive (Frozen=0, L=8) & 5.0283e-01 & 5.0426e-01 & 5.0045e-01 & 1.0000e+00 & -- \\
+Eve - Threat II: Random Key Guess (L=8) & 4.9944e-01 & 5.0154e-01 & 5.0149e-01 & 1.0000e+00 & -- \\
+Eve - Threat III: Frozen-Only Crypto (L=8) & 4.8259e-01 & 4.8053e-01 & 4.7069e-01 & 1.0000e+00 & -- \\
+\hline
+\end{tabular}
+\end{table*}
